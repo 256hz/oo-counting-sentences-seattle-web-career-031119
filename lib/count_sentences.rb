@@ -15,8 +15,10 @@ class String
   end
 
   def count_sentences
-    counter = 0
-    counter += self.split.each_with_object {|sum, string| sum += 1 if string.include?('.' || '!' || '?') }
-    counter
+    sum = 0
+    sum += self.split.each_with_object {|sum, string|
+      binding.pry
+      sum += 1 if string.include?('.' || '!' || '?') }
+    sum
   end
 end
