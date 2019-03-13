@@ -14,7 +14,9 @@ class String
     self.end_with?('!')
   end
 
-  def count_sentences
-    self.count
+  def count_sentences(*strings)
+    counter = 0
+    strings.each {|string| counter += 1 if string.include?('!' || '?' || '!') }
+    counter
   end
 end
