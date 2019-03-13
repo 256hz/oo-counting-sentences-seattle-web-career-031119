@@ -15,6 +15,8 @@ class String
   end
 
   def count_sentences
-    binding.pry
+    sentences = 0
+    ['.', '?', '!'].each {|punct| sentences += self.count(punct)}
+    sentences
   end
 end
