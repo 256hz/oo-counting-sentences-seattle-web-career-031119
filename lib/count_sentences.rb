@@ -17,10 +17,10 @@ class String
   def count_sentences
     sum = 0
     sum += self.split.each {|string|
-      sum += 1 if 
-        string.include?('.') || 
-        string.include('!') || 
-        string.include('?')
+      if string.include?('.') || 
+         string.include('!') || 
+         string.include('?')
+           sum += 1
       end
     }
     sum
