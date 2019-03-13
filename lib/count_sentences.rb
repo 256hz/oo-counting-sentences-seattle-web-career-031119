@@ -18,8 +18,8 @@ class String
     sum = 0
     sum += self.split.each {|string|
       if string.include?('.') || 
-         string.include('!') || 
-         string.include('?')
+         string.include?('!') || 
+         string.include?('?')
            sum += 1
       end
     }
