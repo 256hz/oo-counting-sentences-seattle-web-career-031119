@@ -18,7 +18,7 @@ class String
     sum = 0
     sum += self.split.each {|string|
       binding.pry
-      sum += 1 if string.include?('.' || '!' || '?') 
+      sum += 1 if string.include?('.') || string.include('!' || '? ') 
     }
     sum
   end
