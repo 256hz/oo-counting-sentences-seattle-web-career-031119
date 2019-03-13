@@ -18,6 +18,7 @@ class String
     counter = 0
     self.split.each { |string| 
       if string.include?('!' || '?' || '!') 
+        binding.pry
         counter += 1
       end
     }
