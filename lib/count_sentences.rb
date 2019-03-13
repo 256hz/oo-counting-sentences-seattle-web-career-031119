@@ -16,7 +16,7 @@ class String
 
   def count_sentences
     counter = 0
-    counter += self.count('?' && '!' && '.')
+    counter += self.split.each_with_object {|sum, string| sum += 1 if string.include?('.' || '!' || '?') }
     counter
   end
 end
