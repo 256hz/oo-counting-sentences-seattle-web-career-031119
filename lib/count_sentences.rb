@@ -17,7 +17,7 @@ class String
   def count_sentences
     sentences = 0
     #['. ', '? ', '! ', '...'].each {|punct| sentences += self.count(punct)}
-    self.count()
+    self.scan(/[A-Z]/).size
     binding.pry
     sentences
   end
