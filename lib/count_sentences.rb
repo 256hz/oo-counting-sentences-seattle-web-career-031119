@@ -16,13 +16,13 @@ class String
 
   def count_sentences
     sum = 0
-    sum += self.split.each {|string|
+    sum += self.split.each do |string|
       if string.include?('.') || 
          string.include?('!') || 
          string.include?('?')
            sum += 1
       end
-    }
+    end
     sum
   end
 end
