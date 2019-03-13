@@ -17,6 +17,6 @@ class String
   def count_sentences
     # sentences = 0
     #['. ', '?', '!'].each {|punct| sentences += self.count(punct)}
-    self.scan(/[^\.!?]+[\.!?]/).map(&:strip).count
+    self.scan(/[^\.!?]+[\.!?]/).count
   end
 end
