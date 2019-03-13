@@ -16,7 +16,11 @@ class String
 
   def count_sentences
     counter = 0
-    self.split.each {|string| counter += 1 if string.include?('!' || '?' || '!') }
+    self.split.each { |string| 
+      if string.include?('!' || '?' || '!') 
+        counter += 1
+      end
+    }
     counter
   end
 end
