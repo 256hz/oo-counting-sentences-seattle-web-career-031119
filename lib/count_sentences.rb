@@ -15,14 +15,6 @@ class String
   end
 
   def count_sentences
-    sum = 0
-    sum += self.split.each do |string|
-      if string.include?('.') || 
-         string.include?('!') || 
-         string.include?('?')
-           sum += 1
-      end
-    end
-    sum
+    binding.pry
   end
 end
